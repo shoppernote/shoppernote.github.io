@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Shopper Note",
-  "description": "Shopper Note",
+  "name": "Shoppernote",
+  "description": "Shoppernote",
   "version": "1.0",
   "options_ui": {
     "page": "options.html",
