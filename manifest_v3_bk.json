@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Shoppernote",
+  "description": "Shoppernote",
+  "version": "1.0",
+  // "minimum_chrome_version": 92,
+
+  "options_ui": {
+    "page": "options.html"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  // "web_accessible_resources": ["js/*.js"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content_script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "permissions": ["cookies", "storage", "identity", "scripting"],
+  "optional_permissions": [],
+  "host_permissions": ["*://*/*", "<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    // "extension_pages": "sandbox allow-scripts; script-src 'self' 'https://apis.google.com/' 'https://www.gstatic.com/' 'https://*.firebaseio.com' 'https://www.googleapis.com' 'https://ajax.googleapis.com'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts; script-src 'self' 'https://apis.google.com/' 'https://www.gstatic.com/' 'https://*.firebaseio.com' 'https://www.googleapis.com' 'https://ajax.googleapis.com'; object-src 'self'"
+  }
+}

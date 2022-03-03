@@ -1,0 +1,1 @@
+chrome.runtime.onInstalled.addListener((()=>{importScripts("./js/background.js"),console.log("ASDF")}));
