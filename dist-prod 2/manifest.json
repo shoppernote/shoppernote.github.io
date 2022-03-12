@@ -12,24 +12,13 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.11st.co.kr/*",
-        "*://*.auction.co.kr/*",
-        "*://*.gmarket.co.kr/*"
-      ],
+      "matches": ["<all_urls>"],
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
   "background": {
     "scripts": ["js/vendor.js", "js/background.js"]
   },
-  "permissions": [
-    "cookies",
-    "storage",
-    "identity",
-    "*://*.11st.co.kr/*",
-    "*://*.auction.co.kr/*",
-    "*://*.gmarket.co.kr/*"
-  ],
+  "permissions": ["cookies", "storage", "identity", "<all_urls>"],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com; object-src 'self'"
 }
