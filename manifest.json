@@ -27,6 +27,7 @@
     "cookies",
     "storage",
     "identity",
+    "notification",
     "*://*.11st.co.kr/*",
     "*://*.auction.co.kr/*",
     "*://*.gmarket.co.kr/*"
